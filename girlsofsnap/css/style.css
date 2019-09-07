@@ -636,14 +636,6 @@ body{
 }
 
 @media (max-width: 376px){
-  .service_list {
-   margin-left: -3%;
-   margin-right: -13%;
-}
-.service_list li{
-  margin-left: -2%;
-  margin-right: -2%;
-}
 .amount .col-5{
   padding-right: 0;
 }
