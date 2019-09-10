@@ -1,0 +1,64 @@
+@font-face {
+  font-family: GT Walsheim Pro;
+  src: local("GT Walsheim Pro Regular"),local("GTWalsheimProRegular"),url(GTWalsheimProRegular.woff2) format("woff2"),url(GTWalsheimProRegular.woff) format("woff"),url(GTWalsheimProRegular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: GT Walsheim Pro;
+  src: local("GT Walsheim Pro Bold"),local("GTWalsheimProBold"),url(GTWalsheimProBold.woff2) format("woff2"),url(GTWalsheimProBold.woff) format("woff"),url(GTWalsheimProBold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal
+}
+
+body {
+   background-color: black;
+ }
+
+h1 {
+  color: #fff;
+  font-size: 6vw;
+  margin-top: 15%;
+  font-weight: bolder;
+  font-family: 'GT Walsheim Pro Bold';
+  text-align: center;
+}
+
+a {
+  color: #fff;
+  font-size: 3vw;
+  font-family: 'GT Walsheim Pro Regular';
+  font-weight: lighter;
+  display: inline;
+  text-decoration: none;
+  letter-spacing: 10px;
+}
+
+.spacer {
+  margin-top: 3%;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 15vw;
+    margin-top: 35%;
+  }
+  a {
+    font-size: 9vw;
+  }
+  .spacer {
+    margin-top: 5%;
+  }
+}
+
+.select {
+  text-align: center;
+}
+
+.scramble a {
+  color: white;
+  position: relative;
+  transition: 0.3s .1s;
+  top:0;left:0;
+}

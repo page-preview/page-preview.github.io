@@ -1,0 +1,44 @@
+<html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <title> Onsdag </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="https://cdn.rawgit.com/mfd/7c7a915eb31474cc8c6a65066a4c4dc3/raw/f0f2fb94c21dea904812a53e0eb6cf0bc87f3754/GTWalsheimPro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="animated infinite pulse delay-4s"><h1 class="animated bounceIn delay-1s">onsdag.</h1></div>
+    <div class="select">
+    <div class="animated bounceInLeft delay-2s"><a class="scramble" href="#">Snus</a></div>
+    <div class="spacer"></div>
+    <div class="animated bounceInRight delay-2s"><a class="scramble" href="#">Beer</a></div>
+  </div>
+  <script>
+  $('.scramble').each(function() {
+    var text = $(this).text();
+    $(this).html(text.replace(/./g, "<a>$&</a>"));
+});
+$('.scramble a').each(function() {
+var min = -10, max = 10,
+    min2 = -30, max2 = 30,
+    random = Math.floor(Math.random() * (max - min + 1)) + min,
+    random2 = Math.floor(Math.random() * (max2 - min2 + 1)) + min2,
+    css = "top:"+random+"px; left:"+random2+"px",
+    el = $(this);
+    el.on({
+        mouseenter: function () {
+            el.attr("style", css);
+        },
+        mouseleave: function () {
+            setTimeout(function() {
+            	el.removeAttr("style");
+            }, 300);
+        }
+    });
+});
+  </script>
+ </body>
+</html>
