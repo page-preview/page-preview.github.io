@@ -10,12 +10,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   </head>
   <body>
-    <div class="animated infinite pulse delay-4s slow"><h1 class="animated bounceIn delay-1s">onsdag.</h1></div>
-    <div class="select">
-    <div class="animated bounceInLeft delay-2s"><a class="scramble" href="#">Snus</a></div>
-    <div class="spacer"></div>
-    <div class="animated bounceInRight delay-2s"><a class="scramble" href="#">Beer</a></div>
+      <div class="main-wrapper">
+      <div class="noise-wrapper">
+      <div class="animated bounceIn delay-1s top"><a class="scramble">onsdag.</a></div>
+      <div class="select">
+      <div class="animated infinite pulse delay-4s slow"><div class="animated bounceInUp delay-2s"><h1 onClick="window.location.reload();">snus</h1>
+      <h1 onClick="window.location.reload();">beer</h1></div></div>
+      <div class="noise"></div>
+    </div>
   </div>
+</div>
+
   <script>
   $('.scramble').each(function() {
     var text = $(this).text();
@@ -40,5 +45,12 @@ var min = -10, max = 10,
     });
 });
   </script>
- </body>
+  <script>
+  $(window).on('load', addNoise);
+function addNoise() {
+  $('.noise-wrapper').css('opacity',1);
+}
+</script>
+
+</body>
 </html>
