@@ -270,13 +270,6 @@ table {
   padding-top: 80px;
 }
 
-@media (min-width: 1280px) {
-  table {
-    width: 100%;
-    height: 100%;
-  }
-}
-
 @media (max-width: 1050px) {
   table {
     max-width: 60%;
@@ -308,6 +301,13 @@ td {
 @media (max-width: 1050px) {
   td {
     display: inline-block;
+  }
+}
+
+@media (min-width: 1280px) {
+  td img {
+    width: 11.5vw;
+    height: 11.5vw;
   }
 }
 
