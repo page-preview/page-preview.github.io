@@ -270,6 +270,12 @@ table {
   padding-top: 80px;
 }
 
+@media (max-width: 1280px) {
+  table {
+    min-width: 100%;
+  }
+}
+
 @media (max-width: 1050px) {
   table {
     max-width: 60%;
