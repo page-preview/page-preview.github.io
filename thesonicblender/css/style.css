@@ -1,0 +1,445 @@
+
+
+/* ------------------------------
+   Global styles
+---------------------------- */
+
+html, body, div, span, applet, object, iframe,
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+
+a, abbr, acronym, address, big, cite, code,
+
+del, dfn, em, img, ins, kbd, q, s, samp,
+
+small, strike, strong, sub, sup, tt, var,
+
+b, u, i, center,
+
+dl, dt, dd, ol, ul, li,
+
+fieldset, form, label, legend,
+
+table, caption, tbody, tfoot, thead, tr, th, td,
+
+article, aside, canvas, details, embed,
+
+figure, figcaption, footer, header, hgroup,
+
+menu, nav, output, ruby, section, summary,
+
+time, mark, audio, video {
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  font-size: 100%;
+
+  font: inherit;
+
+  vertical-align: baseline; }
+
+
+
+article, aside, details, figcaption, figure,
+
+footer, header, hgroup, menu, nav, section {
+
+  display: block; }
+
+
+
+body {
+
+  line-height: 1; }
+
+
+
+ol, ul {
+
+  list-style: none; }
+
+
+
+blockquote, q {
+
+  quotes: none; }
+
+
+
+blockquote:before, blockquote:after,
+
+q:before, q:after {
+
+  content: '';
+
+  content: none; }
+
+
+
+table {
+
+  border-collapse: collapse;
+
+  border-spacing: 0; }
+
+
+
+body {
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+
+  line-height: 26px;
+
+  letter-spacing: 0; }
+
+
+
+img {
+
+  max-width: 100%; }
+
+
+
+a,
+
+a:hover,
+
+a:focus {
+
+  cursor: pointer !important;
+
+  outline: none;
+
+  text-decoration: none; }
+
+
+
+h1,
+
+h2,
+
+h3,
+
+h4,
+
+h5,
+
+h6 {
+
+ font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+
+  color: #1e2c34;
+
+  margin: 0;
+
+  padding: 0; }
+
+
+
+ul, li {
+
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none; }
+
+
+
+strong {
+
+  font-weight: 700; }
+
+
+
+/* This only works with JavaScript,
+        if it's not present, don't show loader */
+
+.no-js #loader {
+    display: none;
+}
+
+.js #loader {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    background: url(../img/loader_ico.gif) center no-repeat #fff;
+}
+
+
+
+/* --------------------------------
+
+menue style
+
+-------------------------------- */
+
+
+.top_navbar{
+  width: 100%;
+  padding-top: 40px;
+}
+
+.center_logos{
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.center_logos h3{
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 1.3em;
+  color: #000;
+}
+.menu_list_nav{
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+.menu_list_nav li{
+  display: inline-block;
+  padding: 4px 10px;
+}
+.menu_list_nav li a{
+  font-weight: 300;
+  color: #000000;
+  font-size: 16px;
+}
+
+/* --------------------------------
+
+close menue style
+
+-------------------------------- */
+
+
+/*grid posts*/
+.all_grid_post{
+  width: 100%;
+  padding-top: 60px;
+}
+
+.title_inter {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.title_inter h3{
+  font-weight: 300;
+  font-size: 32px;
+  color: #000000;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+  object-fit: cover;
+}
+.grid{
+  max-width: 1140px;
+  margin: auto;
+  object-fit: cover;
+}
+
+.grid-item .overlay h4{
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+}
+.grid-item .overlay p{
+  font-weight: 300;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+.grid-item:hover .overlay{
+  opacity: 1;
+}
+.grid-item .overlay{
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding:10px;
+  opacity: 0;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+/*  background-color: #fff;*/
+background-color: rgba(0, 33, 87, 0.5);
+
+}
+.grid-item {
+  width: 150px;
+  height: 120px;
+  float: left;
+  margin-top: 12px;
+  margin-right: 4px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.grid-item.height-2 {
+  height: 252px;
+  object-fit: cover;
+}
+.grid-item.height-2 img{
+  height: 252px;
+  object-fit: cover;
+}
+.grid-item.width-2{
+  width: 312px;
+  object-fit: cover;
+}
+.grid-item img{
+  height:120px;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.grid-item.sqaure{
+  width: 312px;
+  height: 252px;
+  object-fit: cover;
+}
+.grid-item.sqaure img{
+  object-fit: cover;
+  height: 252px;
+}
+
+
+/*pagination*/
+.pagination_search{
+  width: 100%;
+  padding-top: 50px;
+}
+
+.inside_older_search ul{
+  display: flex;
+}
+.inside_older_search li{
+  display: inline-block;
+  font-weight: 300;
+  font-size: 24px;
+  color: #000000;
+}
+.inside_older_search li a{
+  font-weight: 300;
+  font-size: 24px;
+  color: #000000;
+}
+.inside_older_search li input{
+  border:0;
+  outline: 0;
+  border-bottom: 1px solid #000;
+  max-width: 100px;
+}
+
+.footer_copyrights{
+  width: 100%;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+.footer_copyrights p{
+  font-weight: 300;
+  color: #000;
+  font-size: 14px;
+}
+
+@media (max-width: 1024px){
+  .grid {
+    max-width: 800px;
+    margin: auto;
+    width: 100%;
+}
+
+}
+@media (max-width: 767px){
+  .center_logos h3{
+  font-size: 32px;
+}
+.title_inter h3{
+  font-size: 24px;
+}
+.inside_older_search li a,
+.inside_older_search li{
+  font-size: 20px;
+}
+}
+
+
+/*page2*/
+.page2content_all{
+  width: 100%;
+  padding-top: 50px;
+}
+.left_image_dv{
+  padding-right: 30px;
+}
+.right_text_pg h3{
+  font-weight: 300;
+  color: #000000;
+  font-size: 32px;
+  padding-bottom: 30px;
+}
+.right_text_pg p{
+  font-weight: 300;
+  color: #000;
+  font-size: 14px;
+}
+
+@media (max-width: 767px){
+  .left_image_dv{
+  padding-right: 0;
+  padding-bottom: 40px;
+}
+.right_text_pg h3{
+  font-size: 24px;
+}
+}
+
+.fb-post {
+  width: 100%;
+  margin-bottom: 30px
+}
+  .fb_iframe_widget span,
+  .fb_iframe_widget iframe{
+    width: 100% !important;
+  }
+
+@media (max-width: 992px){
+  .fb_iframe_widget span,
+  .fb_iframe_widget iframe{
+    width: 100% !important;
+  }
+}
+
+#bubbles {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
