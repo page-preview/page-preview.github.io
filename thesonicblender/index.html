@@ -150,9 +150,9 @@
     							<p>Interpol is back with their sixth studio record Marauder. Here’s the video for the lead single “If You Really Love Nothing”.</p>
     						</div>
     					</div><!--single_item-->
-    					<div class="grid-item">
+    					<div class="grid-item" onclick="location.href='posts/post8.html';">
     						<div class="img">
-    							<img src="img/img8.jpg" alt=""/ onclick="location.href='posts/post8.html';">
+    							<img src="img/img8.jpg" alt=""/>
     						</div>
     						<div class="overlay">
     							<h4>Interview - Lindsey Walker</h4>
@@ -367,6 +367,9 @@
                     <div class="facebook_posts">
                         <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fthesonicblender&tabs=timeline&width=460&height=620&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="460" height="620" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                     </div>
+                    <div class="title_inter">
+                        <h3>Fresh Playlist:</h3>
+                    </div>
                     <div class="soundcloud_track mt-3">
                         <div class="title_inter">
                             <h3>Newest Releases:</h3>
@@ -374,10 +377,6 @@
                         <div class="all_soundtracxt_list">
                             <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=141200368/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://nocares.bandcamp.com/album/no-teenage-rage">No Teenage Rage by NO CARES</a></iframe>
                             <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2267339691/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://theholygasp.bandcamp.com/album/the-love-songs-of-oedipus-rex">The Love Songs of Oedipus Rex by The Holy Gasp</a></iframe>
-                            <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2255160368/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://secretbaby.bandcamp.com/album/its-a-secret-baby">It&#39;s a secret, baby by Secret Baby</a></iframe>
-                            <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1446699733/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://thegreendoor.bandcamp.com/album/wolf-in-the-fold">Wolf In The Fold by The Green Door</a></iframe>
-                        </div>
-
                     </div><!--/.soundcloud_track-->
 
 
@@ -397,8 +396,16 @@
     						<li><a href="#">View Older Posts...</a></li>
     						<li>or</li>
     						<li><form>
-    							<label>...Search for </label>
-    							<input type="search" />
+    							<label>...Search by </label>
+                  <dl class="list maki">
+                      <dt class="toggle">Genre</dt>
+                      <dd><a href="#">Punk</a></dd>
+                      <dd><a href="#">Folk</a></dd>
+                      <dd><a href="#">Garage</a></dd>
+                      <dd><a href="#">Post-Punk</a></dd>
+                      <dd><a href="#">Rock N' Roll</a></dd>
+                      <dd><a href="#">Psychedelic</a></dd>
+                  </dl>
     						</form></li>
     					</ul>
     				</div>
@@ -435,6 +442,52 @@
     <script src="js/vendor/easing.js"></script>
     <!--main script-->
     <script src="js/main.js"></script>
+
+    <div class="warning">
+        <div class="message">
+            <h1>CSS 3D Not Detected :(</h1>
+            <p>I couldn't detect your browser's CSS 3D capabilities!</p>
+        </div>
+    </div>
+
+    <script src="js/makisu.js"></script>
+    <script>
+
+        // The `enabled` flag will be `false` if CSS 3D isn't available
+
+        if ( $.fn.makisu.enabled ) {
+
+            var $maki = $( '.maki' );
+
+            // Create Makisus
+
+            $maki.makisu({
+                selector: 'dd',
+                overlap: 0.6,
+                speed: 0.85
+            });
+            // Open all
+
+            $( '.list' ).makisu( 'closed' );
+
+            // Toggle on click
+
+            $( '.toggle' ).on( 'click', function() {
+                $( '.list' ).makisu( 'toggle' );
+            });
+
+            // Disable all links
+
+            $( '.demo a' ).click( function( event ) {
+                event.preventDefault();
+            });
+
+        } else {
+
+            $( '.warning' ).show();
+        }
+
+    </script>
 
 </body>
 </html>
