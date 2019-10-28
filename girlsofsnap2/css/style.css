@@ -690,7 +690,7 @@ border-radius: 50%;
 }
 .clickToChat img{
   max-width: 60px;
-  max-height: 60px;
+  height: auto;
 }
 .clickToChat .sign1{
   margin-top: -0px;
